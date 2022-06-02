@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Actions.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <h1 id="title">welcome</h1>
+    <nav id="bigNav">
+        <div id="left">
+            <div id="allProducts">
+            </div>
+        </div>
+        <div id="right">
+            <div id="container">
+                <h2 class="pink">filter</h2>
+                <h3>search by name</h3>
+                <input type="text" placeholder="enter product name" id="productName">
+                <button onclick="stock.searchByName()" class="btn"> submit</button>
+
+                <h3>search by price</h3>
+                <input type="text" placeholder="enter min product price" id="minPrice">
+                <input type="text" placeholder="enter nax product price" id="maxPrice">
+
+                <button onclick="stock.searchByPrice()" class="btn"> submit</button>
+
+                <h3>search by category</h3>
+                <!-- <input type="text" placeholder="enter product category" id="categoryInput"> -->
+                <select id="categoryInput"></select>
+
+                <button onclick="stock.searchByCategory()" class="btn"> submit</button>
+
+                <h3>search by qty</h3>
+                <input type="text" placeholder="enter min qty" id="minQty">
+
+                <button onclick="stock.searchByQty()" class="btn"> submit</button>
+            </div>
+            <div id="addDiv">
+                <h3 class="pink">add a product</h3>
+                <div>
+                    <input type="text" placeholder="enter product name" id="interName">
+                    <select id="categorySelect"></select>
+                    <!-- <input type="text" placeholder="enter product category" id="interCategory"> -->
+                    <input type="text" placeholder="enter product price" id="interPrice">
+                    <input type="text" placeholder="enter product qty" id="interQty">
+                    <input type="text" placeholder="enter product code" id="interCode">
+                </div>
+                <button onclick="stock.addProduct()" class="btn">ADD</button>
+            </div>
+            <div id="purchase">
+                <h4 class="pink">purchase</h4>
+                <div>
+                    <h5>choose product to decrease in stock</h5>
+                    <input type="text" placeholder="enter product code to be changed" id="makePurchase">
+                    <input type="number" placeholder="enter amount wewre bought" id="amount">
+                    <button onclick="stock.makePurchase()" class="btn">OK</button>
+
+                </div>
+                <p class="pink">-------------------------------------------------------------------------------------------------------</p>
+                <div>
+                    <h5>choose product to increase in stock</h5>
+                    <input type="text" placeholder="enter product code to be changed" id="addtostock">
+                    <input type="number" placeholder="enter amount to add" id="amountAdd">
+                    <button onclick="stock.addToStock()" class="btn">OK</button>
+
+                </div>
+            </div>
+            <div id="editDiv">
+                <h3 class="pink">edit a product by code</h3>
+                <div>
+                    <h5>choose product to edit by its code</h5>
+                    <input type="text" placeholder="enter product code to be changed" id="chosen"><br>
+                    <label>to erase that product?</label> 
+                    <button onclick="stock.eraseProduct()" class="btn">ERASE</button><br>
+                    <label>or edit?</label> 
+                    <p>fill in its new details</p>
+                    <div>
+                        <input type="text" placeholder="enter product code" id="editCode">
+                        <input type="text" placeholder="enter product name" id="editName">
+                        <select id="editCategory"></select>
+                        <input type="text" placeholder="enter product price" id="editPrice">
+                        <input type="text" placeholder="enter product qty" id="editQty">
+                    </div>
+                    <div>
+                        <button onclick="stock.editProduct()" class="btn">EDIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="Stock.js"></script>
+</body>
+
+</html>

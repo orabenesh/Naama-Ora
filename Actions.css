@@ -1,0 +1,49 @@
+#title,
+.btn {
+    background-color: rgb(195, 12, 82);
+    color: white;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: 1vh;
+}
+
+#bigNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.div {
+    font-size: 2vw;
+    display: inline-table;
+    border-width: 3px;
+    border-radius: 5%;
+    border-style: solid;
+    border-color: black;
+    color: rgb(195, 12, 82);
+    padding: 1vh;
+    padding-top: 0;
+    margin: 1vh;
+    width: 15vw;
+    max-height: 38vh;
+}
+
+#editDiv,
+#addDiv,
+#container,
+#purchase {
+    /* display: inline; */
+    border-width: 3px;
+    border-color: rgb(195, 12, 82);
+    border-style: solid;
+    border-radius: 10%;
+    padding: 2vh;
+    margin: 2vh;
+    text-justify: inter-word;
+}
+
+.pink {
+    color: rgb(195, 12, 82);
+    text-align: center;
+}
